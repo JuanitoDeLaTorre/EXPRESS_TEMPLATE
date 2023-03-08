@@ -1,3 +1,4 @@
 node_modules
-.env
-connection.js
+Config
+Config/.env
+Config/connection.js

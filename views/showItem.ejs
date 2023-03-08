@@ -1,0 +1,15 @@
+<%- include('./partials/headHeader.ejs') %>
+
+<h1 id = "showH1">NOW SHOWING: <%= item.name%></h1>
+
+<div class="block" id = "showBlock">
+    <h4><%= item.name %></h4>
+    <p>🥳 Birthday: <%= item.birthday %></p>
+    <p>📈 Height: <%= item.height %></p>
+    <p>🧐 Stats:</p>
+    <ul>
+        <li>🩺 HP: <%= item.stats.hp %></li>
+        <li>🗡️ Attack: <%= item.stats.attack %></li>
+        <li>🛡️ Defense: <%= item.stats.defense %></li>
+    </ul>
+</div>

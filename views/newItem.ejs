@@ -1,0 +1,25 @@
+<%- include('./partials/headHeader.ejs') %>
+
+<body>
+    <form method = "POST" action="/newItem">
+        <label for="name">Name:</label>
+        <input type="text" name = "name">
+
+        <label for="birthday">Birthday:</label>
+        <input type="text" name = "birthday">
+
+        <label for="height">Height:</label>
+        <input type="text" name = "height">
+
+        <label for="hp">HP:</label>
+        <input type="text" name = "hp">
+
+        <label for="attack">Attack:</label>
+        <input type="text" name = "attack">
+
+        <label for="defense">Defense:</label>
+        <input type="text" name = "defense">
+
+        <input type="submit" value = "Submit New Item">
+    </form>
+</body>

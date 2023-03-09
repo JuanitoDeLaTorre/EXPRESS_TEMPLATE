@@ -1,0 +1,16 @@
+<%- include('./partials/headHeader.ejs') %>
+
+<body>
+    <h1>SIGN IN FORM</h1>
+    <form method = "POST" action="/newUserSubmit">
+        <label for="username">Username:</label>
+        <input type="text" name = "username">
+
+        <label for="email">Email:</label>
+        <input type="text" name = "email">
+
+        <label for="password">Password:</label>
+        <input type="text" name = "password">
+        <input type="submit" value = "Create New Account">
+    </form>
+</body>

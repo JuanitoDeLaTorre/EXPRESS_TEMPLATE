@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 
 const connectionString = process.env.MONGO_DB_URI;
 
-mongoose.connect('mongodb+srv://JuanitoDeLaTorre:chubkins8@cluster0.fyizln6.mongodb.net/Pokemon?retryWrites=true&w=majority');
+mongoose.connect(connectionString);
 
 // mongoDB connection on success
 mongoose.connection.on('connected', () => {

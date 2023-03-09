@@ -1,0 +1,11 @@
+<%- include('./partials/headHeader.ejs', {user:user.username}) %>
+
+<body>
+    <h1 id = "profileH1" >Here are your user details:</h1>
+    <ul>
+        <li><strong>Username: </strong> <%= user.username %></li>
+        <li><strong>Email: </strong> <%= user.email %></li>
+        <li><strong>Password: </strong> <%= user.password %></li>
+
+    </ul>
+</body>

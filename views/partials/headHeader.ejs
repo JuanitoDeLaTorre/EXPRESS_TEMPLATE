@@ -12,8 +12,18 @@
     <h2>[ EXPRESS TEMPLATE SITE ]</h2>
     <nav>
         <ul>
-            <li><a href = "http://localhost:3000/new">NEW</a></li>
-            <li><a href = "http://localhost:3000/">LIST ALL</a></li>
+                <li><a href = "http://localhost:3000/new">NEW</a></li>
+                <li><a href = "http://localhost:3000/">LIST ALL</a></li>
+            <% if(typeof user === 'undefined') { %>
+                <li><a href = "http://localhost:3000/signUp">SIGN-UP</a></li>
+                <li><a href = "http://localhost:3000/login">LOG IN</a></li>
+            </ul>
+            <% } else { %>
+            <li><a href = "http://localhost:3000/logout">LOG OUT</a></li>
+            
         </ul>
+        <a href="http://localhost:3000/profile"><div class="profile"><%= user[0] %></div></a>
+            <% } %>
+        
     </nav>
 </header>

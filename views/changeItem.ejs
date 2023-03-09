@@ -1,0 +1,28 @@
+<%- include('./partials/headHeader.ejs') %>
+
+<body>
+    <h1 id = "changeH1">What stats do you want to change for <%= itemToChange.name %>?</h1>
+        <form method= "POST" action="/changeItem/<%= itemToChange.name %>?_method=PUT">
+            
+            <label for="name">Name: (previously <%= itemToChange.name %>)</label>
+            <input type="text" name = "name">
+
+            <label for="birthday">Birthday: (previously <%= itemToChange.birthday %>)</label>
+            <input type="text" name = "birthday">
+
+            <label for="height">Height: (previously <%= itemToChange.height %>)</label>
+            <input type="text" name = "height">
+
+            <label for="hp">HP: (previously <%= itemToChange.stats.hp %>)</label>
+            <input type="text" name = "hp">
+
+            <label for="attack">Attack: (previously <%= itemToChange.stats.attack %>)</label>
+            <input type="text" name = "attack">
+
+            <label for="defense">Defense: (previously <%= itemToChange.stats.defense %>)</label>
+            <input type="text" name = "defense">
+
+            <input type = "submit" value = "Submit New Values">
+            
+        </form>
+</body>

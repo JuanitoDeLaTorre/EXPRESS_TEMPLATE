@@ -2,20 +2,26 @@
 
 <body>
     <div class="listAll">
-        <% allItems.forEach((item)=> { %>
-            <a href="http://localhost:3000/showItem/<%= item.name %>"><div class="block" id = "<% item.name %>">
-                <h4><%= item.name %></h4>
-                <p>🥳 Birthday: <%= item.birthday %></p>
-                <p>📈 Height: <%= item.height %></p>
+        <% for(let i = 0; i < allItems.length; i++) { %>
+            <div class="block" id = "<% allItems[i].name %>">
+                <img src="https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="">
+                <h4><%= allItems[i].name %></h4>
+                <p>🥳 Birthday: <%= allItems[i].birthday %></p>
+                <p>📈 Height: <%= allItems[i].height %></p>
                 <p>🧐 Stats:</p>
                 <ul>
-                    <li>🩺 HP: <%= item.stats.hp %></li>
-                    <li>🗡️ Attack: <%= item.stats.attack %></li>
-                    <li>🛡️ Defense: <%= item.stats.defense %></li>
+                    <li>🩺 HP: <%= allItems[i].stats.hp %></li>
+                    <li>🗡️ Attack: <%= allItems[i].stats.attack %></li>
+                    <li>🛡️ Defense: <%= allItems[i].stats.defense %></li>
                 </ul>
+                <a href="/change/<%= allItems[i].name %>"><button id = "listButton">CHANGE</button></a>
+                <a href="/delete/<%= allItems[i].name %>"><button id = "listButton">DELETE</button></a>
             </div>
-            </a>
-        <% }) %>    
+            
+        <% } %>   
+        <ul> 
+        
+        </ul>
     </div>
 </body>
 
